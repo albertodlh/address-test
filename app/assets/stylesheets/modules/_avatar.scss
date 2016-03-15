@@ -1,0 +1,12 @@
+.avatar {
+  @include border-radius(50%);
+  width: 180px;
+  height: 180px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.avatar--small {
+  width: 30px;
+  height: 30px;
+}

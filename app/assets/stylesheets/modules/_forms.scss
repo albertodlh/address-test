@@ -1,0 +1,45 @@
+.form {}
+
+.form__controls {
+  text-align: right;
+  margin-top: 2.2rem;
+}
+
+.field {
+  display: block;
+  margin-bottom: 1.5em;
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.field__label-container {
+  display: inline-block;
+  width: 30%;
+  @media #{$small-max}{
+    width: 100%;
+  }
+}
+
+.field__label {
+  vertical-align: middle;
+  color: $color-gray;
+}
+
+.field__label-icon {
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+  margin-right: 0.5rem;
+  display: inline-block;
+  vertical-align: middle;
+  color: $color-muted;
+}
+
+.field__input {
+  display: inline-block;
+  width: 70%;
+  @media #{$small-max}{
+    width: 100%;
+  }
+}

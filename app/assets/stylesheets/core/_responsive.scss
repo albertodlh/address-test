@@ -1,0 +1,14 @@
+$small-width: 470px!default;
+$medium-width: 750px!default;
+$big-width: 1200px!default;
+
+$small-max: "only screen and (max-width: #{$small-width - 1})";
+$medium-max: "only screen and (max-width: #{$medium-width - 1})";
+$big-max: "only screen and (max-width: #{$big-width})";
+
+/*
+  // Cómo usar:
+  @media #{$medium-max}{
+    // do stuff
+  }
+*/

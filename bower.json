@@ -1,0 +1,25 @@
+{
+  "name": "address",
+  "version": "1.0.0",
+  "authors": [
+    "Alberto De la Hoz <alberto.delahoz@koombea.com>"
+  ],
+  "description": "Address Book",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "handlebars": "^4.0.5",
+    "underscore": "^1.8.3",
+    "normalize-css": "normalize.css#^3.0.3"
+  }
+}

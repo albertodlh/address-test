@@ -1,0 +1,74 @@
+.modal {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  text-align: center;
+  pointer-events: none;
+  z-index: 100;
+  font-size: 0;
+  padding: 0 10px;
+
+  &:before {
+    content: '';
+    height: 100%;
+    width: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &.is-open {
+    .modal__overlay {
+      opacity: 1;
+      pointer-events: initial;
+    }
+    .modal__window {
+      @include transform(scale(1));
+    }
+  }
+}
+
+.modal__overlay {
+  @include transition(opacity 0.3s ease-in);
+  position: fixed;
+  background-color: rgba(50, 50, 50, 0.5);
+  top: 0; right: 0; bottom: 0; left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal__window {
+  @include transition(all 0.4s cubic-bezier(.25,.8,.25,1));
+  @include box-shadow($shadow-z5);
+  @include transform(scale(0));
+  font-size: $font-size-base;
+  text-align: initial;
+  pointer-events: initial;
+  padding: 2.5rem;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: $color-bgnd;
+  position: relative;
+  z-index: 110;
+  max-width: 100%;
+}
+
+.modal__sidebar {
+  float: left;
+  width: 180px;
+  text-align: center;
+
+  @media #{$medium-max}{
+    width: initial;
+    float: none;
+    margin-bottom: 2rem;
+  }
+}
+
+.modal__content {
+  margin-left: 215px;
+  width: 470px;
+  max-width: 100%;
+
+  @media #{$medium-max}{
+    margin: 0;
+  }
+}

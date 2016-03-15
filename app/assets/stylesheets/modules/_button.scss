@@ -1,0 +1,65 @@
+@mixin button-colors($bgnd-color){
+  background-color: $bgnd-color;
+  &:hover {
+    @include box-shadow($shadow-z2);
+    background-color: lighten($bgnd-color, 3%);
+  }
+  &:active {
+    @include box-shadow($shadow-z3);
+    background-color: lighten($bgnd-color, 6%);
+  }
+}
+
+.btn {
+  @include box-shadow($shadow-z1);
+  @include transition(all 0.2s ease-out);
+  @include button-colors($color-accent);
+  display: inline-block;
+  padding: 0.7em 1.5em;
+  color: $color-white;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn--inline {
+  margin-right: 1rem;
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.btn--vertical {
+  margin-top: 1rem;
+}
+
+.btn--danger {
+  @include button-colors($color-primary);
+}
+
+.btn--muted {
+  @include button-colors($color-muted);
+}
+
+.floating-btn {
+  @include border-radius(50%);
+  @include box-shadow($shadow-z2);
+  @include transition(all 0.2s ease-out);
+  display: block;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  background-color: $color-accent;
+  color: $color-white;
+  position: fixed;
+  bottom: 50px;
+  right: 60px;
+  text-decoration: none;
+  @include button-colors($color-accent);
+}
+
+.floating-btn__icon {
+  line-height: 50px;
+  font-size: 2.5rem;
+}

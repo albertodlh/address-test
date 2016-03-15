@@ -1,0 +1,13 @@
+.text-input {
+  @include transition(all 0.2s ease-in-out);
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+  padding: 0.4em 0;
+  border: none;
+  border-bottom: 1px solid $color-muted;
+
+  &:focus {
+    border-color: $color-accent;
+  }
+}

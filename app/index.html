@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Address Book</title>
+  <link href="assets/stylesheets/application.css" rel="stylesheet" type="text/css" />
+  <script id="contact-template" type="text/x-handlebars-template">
+    <tr class="table__row">
+      <td class="table__cell  table__cell--small">
+        <img src="/assets/images/emilia.png" class="avatar avatar--small" alt="{{ name }}" title="{{ name }}">
+      </td>
+      <td class="table__cell">
+        <a href="#" class="table__link  js-update">
+          {{ name }}
+        </a>
+      </td>
+      <td class="table__cell  hide-medium">
+        <span class="table__icon  table__icon--margin  icon-twitter  color-twitter"></span>
+        <a href="http://www.twitter.com/{{ twitter }}" class="table__link">
+          {{ twitter }}
+        </a>
+      </td>
+      <td class="table__cell  hide-small">
+        <span class="table__icon  table__icon--margin  icon-email"></span>
+        <a href="mailto:{{ email }}" class="table__link">
+          {{ email }}
+        </a>
+      </td>
+      <td class="table__cell">
+        <span class="table__icon  table__icon--margin  icon-call"></span>
+        {{ phone }}
+      </td>
+      <td class="table__cell  table__cell--small">
+        <a href="#" class="js-favorite  table__link-icon">
+          <span class="table__icon  icon-star  {{#if favorite}} color-gold {{/if}}"></span>
+        </a>
+      </td>
+      <td class="table__cell  table__cell--small">
+        <a href="#" class="js-delete  table__link-icon">
+          <span class="table__icon  icon-delete"></span>
+        </a>
+      </td>
+    </tr>
+  </script>
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">Koombea Contacts</h1>
+  </header>
+
+  <div class="container">
+    <section class="section">
+      <h1 class="section__title">Favorites</h1>
+      <table class="table">
+        <tbody class="js-favorites-table">
+        </tbody>
+      </table>
+    </section>
+    <section class="section">
+      <h1 class="section__title">All Contacts</h1>
+      <table class="table">
+        <tbody class="js-contacts-table">
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <a href="#" class="js-floating-btn floating-btn">
+    <span class="icon-add floating-btn__icon"></span>
+  </a>
+
+  <div class="js-modal modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__window">
+      <div class="modal__sidebar">
+        <img src="/assets/images/emilia.png" class="avatar" alt="" title="">
+        <div><input type="button" class="btn  btn--vertical  btn--danger  js-delete-current" value="Delete">
+        <input type="button" class="btn  btn--vertical  js-favorite-current" value="Favorite"></div>
+      </div>
+      <div class="modal__content">
+        <form class="js-contact-form">
+        <div class="panel">
+          <h1 class="panel__title">Contact Modal</h1>
+          <div class="field">
+            <div class="field__label-container">
+              <span class="field__label-icon  icon-account"></span>
+              <label class="field__label" for="contact_name">Name: </label>
+            </div><!--
+            --><div class="field__input">
+              <input id="contact_name" class="text-input" name="name" type="text" placeholder="Contact Name">
+            </div>
+          </div>
+          <div class="field">
+            <div class="field__label-container">
+              <span class="field__label-icon  icon-twitter  color-twitter"></span>
+              <label class="field__label" for="contact_twitter">Twitter: </label>
+            </div><!--
+            --><div class="field__input">
+              <input id="contact_twitter" class="text-input" name="twitter" type="text" placeholder="example">
+            </div>
+          </div>
+          <div class="field">
+            <div class="field__label-container">
+              <span class="field__label-icon  icon-email"></span>
+              <label class="field__label" for="contact_email">Email: </label>
+            </div><!--
+            --><div class="field__input">
+              <input id="contact_email" class="text-input" name="email" type="text" placeholder="example@test.com">
+            </div>
+          </div>
+          <div class="field">
+            <div class="field__label-container">
+              <span class="field__label-icon  icon-call"></span>
+              <label class="field__label" for="contact_phone">Phone: </label>
+            </div><!--
+            --><div class="field__input">
+              <input id="contact_phone" class="text-input" name="phone" type="text" placeholder="1234567">
+            </div>
+          </div>
+        </div>
+        <div class="form__controls  text-right">
+          <input type="button" class="btn  btn--inline  btn--muted js-modal-cancel" value="Cancel">
+          <input type="submit" class="btn  btn--inline  btn--primary" value="Save">
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="assets/javascripts/vendor/bundle.js"></script>
+  <script type="text/javascript" src="assets/javascripts/application.js"></script>
+</body>
+</html>

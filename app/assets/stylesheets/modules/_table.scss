@@ -1,0 +1,50 @@
+.table {
+  @include box-shadow($shadow-z1);
+  background-color: $color-white;
+  width: 100%;
+}
+
+.table__row {
+  border-bottom: 1px solid $color-divider;
+  &:last-child {
+    border: none;
+  }
+}
+
+.table__cell {
+  padding: 0.6rem;
+  vertical-align: middle;
+  &:first-child {
+    padding-left: 1rem;
+  }
+  &:last-child {
+    padding-right: 1rem;
+  }
+}
+
+.table__cell--small {
+  width: 30px;
+}
+
+.table__icon {
+  color: $color-muted;
+  font-size: 1.6rem;
+  vertical-align: middle;
+}
+
+.table__icon--margin {
+  margin-right: 0.3rem;
+}
+
+.table__link {
+  color: $color-text;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.table__link-icon {
+  &:hover {
+    text-decoration: none;
+  }
+}

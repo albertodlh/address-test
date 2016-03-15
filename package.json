@@ -1,0 +1,19 @@
+{
+  "name": "address",
+  "version": "1.0.0",
+  "description": "Address Book",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alberto De la Hoz <alberto.delahoz@koombea.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3",
+    "main-bower-files": "^2.11.1"
+  }
+}

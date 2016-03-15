@@ -1,0 +1,29 @@
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+.color-twitter {
+  color: $color-twitter;
+}
+
+.color-gold {
+  color: $color-gold;
+}
+
+.hide-small {
+  @media #{$small-max}{
+    display: none;
+  }
+}
+
+.hide-medium {
+  @media #{$medium-max}{
+    display: none;
+  }
+}
+

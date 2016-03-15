@@ -1,0 +1,69 @@
+html {
+  -webkit-font-smoothing: antialiased !important;
+  font-size: $font-size-base;
+}
+
+body{
+  font-family: $default-font-family;
+  color: $color-text;
+  line-height: $line-height-base;
+}
+
+// h1, h2, h3, h4, h5, h6,
+// .huge, .alpha, .beta, .gamma, .delta, .epsilon, .zeta{
+//   color: $default-heading-color;
+//   margin: 0 0 0.8em 0;
+//   text-rendering: optimizeLegibility;
+// }
+
+// p {
+//   margin: 0 0 1.3em 0;
+// }
+
+// p:last-child {
+//   margin-bottom: 0;
+// }
+
+.huge, h1, .alpha{
+  //line-height: $line-height-small;
+}
+
+h2, h3, h4,
+.beta, .gamma, .delta{
+  //line-height: $line-height-medium;
+}
+
+h5, h6, p
+.epsilon, .zeta{
+  line-height: $line-height-base;
+}
+
+$font-size-alpha: $font-size-base * 2.441;
+$font-size-beta: $font-size-base * 1.953;
+$font-size-gamma: $font-size-base * 1.563;
+$font-size-delta: $font-size-base * 1.15;
+$font-size-epsilon: $font-size-base;
+
+h1, .alpha{
+  font-size: $font-size-alpha;
+}
+
+h2, .beta{
+  font-size: $font-size-beta;
+}
+
+h3, .gamma{
+  font-size: $font-size-gamma;
+}
+
+h4, .delta{
+  font-size: $font-size-delta;
+}
+
+h5, .epsilon{
+  font-size: $font-size-epsilon;
+}
+
+small, .small{
+  font-size: 80%;
+}

@@ -1,0 +1,13 @@
+.section {
+  margin-bottom: 2rem;
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.section__title {
+  font-size: 1.1rem;
+  color: $color-text-secondary;
+  font-weight: 500;
+  margin: 0 0 1em 0;
+}
